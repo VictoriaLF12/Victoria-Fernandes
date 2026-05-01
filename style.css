@@ -58,6 +58,23 @@ body {
     color: #38bdf8;
 }
 
+/* BOUTON GITHUB */
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background-color: #38bdf8;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #0ea5e9;
+}
+
 /* SKILLS */
 .skills {
     display: flex;
