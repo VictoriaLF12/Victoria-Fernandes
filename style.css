@@ -1,81 +1,119 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     background-color: #0f172a;
     color: #e2e8f0;
+    line-height: 1.6;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: linear-gradient(135deg, #1e293b, #0f172a);
+    border-bottom: 1px solid #1f2a44;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 48px;
     margin: 0;
+    letter-spacing: 0.5px;
 }
 
 .hero p {
     color: #94a3b8;
-    margin-top: 10px;
+    max-width: 700px;
+    margin: 12px auto 0;
+    font-size: 16px;
 }
 
 /* SECTIONS */
 .section {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
-/* GRID PROJETS */
+.section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #38bdf8;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
     background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #26324a;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    background: #273449;
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.1);
 }
 
 .card h3 {
     margin-top: 0;
+    font-size: 18px;
 }
 
+.card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* TAGS / STACK */
 .card span {
-    font-size: 12px;
-    color: #38bdf8;
-}
-
-/* BOUTON GITHUB */
-.button {
     display: inline-block;
     margin-top: 10px;
+    font-size: 12px;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.08);
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    margin-top: 14px;
     padding: 10px 14px;
-    background-color: #38bdf8;
-    color: white;
+    background: #38bdf8;
+    color: #0f172a;
     border-radius: 8px;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: 0.25s;
 }
 
 .button:hover {
     background-color: #0ea5e9;
+    transform: scale(1.03);
 }
 
-/* SKILLS */
+/* SKILLS (si tu gardes l’ancienne section) */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -87,11 +125,20 @@ body {
     padding: 8px 12px;
     border-radius: 8px;
     font-size: 14px;
+    border: 1px solid #26324a;
+}
+
+/* LISTS */
+ul {
+    padding-left: 18px;
+    color: #cbd5e1;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     color: #64748b;
+    border-top: 1px solid #1f2a44;
+    margin-top: 40px;
 }
