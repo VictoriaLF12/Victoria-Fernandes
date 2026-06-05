@@ -1,76 +1,100 @@
+/* ========== GLOBAL ========== */
 body {
     margin: 0;
     font-family: "Inter", Arial, sans-serif;
-    background-color: #0f172a;
     color: #e2e8f0;
-    line-height: 1.6;
+    line-height: 1.7;
+
+    background: radial-gradient(circle at top, #1e293b 0%, #0b1220 70%);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-/* HERO */
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #38bdf8;
+    color: #0b1220;
+}
+
+/* ========== HERO ========== */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #1e293b, #0b1220);
     border-bottom: 1px solid #1f2a44;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin: 0;
-    letter-spacing: 0.5px;
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0 0 10px;
+
+    background: linear-gradient(90deg, #38bdf8, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
     color: #94a3b8;
+    font-size: 18px;
     max-width: 700px;
-    margin: 12px auto 0;
-    font-size: 16px;
+    margin: 10px auto;
 }
 
-/* SECTIONS */
+/* ========== SECTIONS ========== */
 .section {
     max-width: 1100px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .section h2 {
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
     position: relative;
 }
 
 .section h2::after {
     content: "";
     display: block;
-    width: 50px;
+    width: 60px;
     height: 3px;
     background: #38bdf8;
-    margin-top: 8px;
+    margin-top: 10px;
     border-radius: 2px;
 }
 
-/* GRID */
+/* ========== GRID ========== */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
 }
 
-/* CARD */
+/* ========== CARDS ========== */
 .card {
-    background: #1e293b;
-    padding: 22px;
-    border-radius: 14px;
-    border: 1px solid #26324a;
-    transition: all 0.25s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(30, 41, 59, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 16px;
+
+    padding: 24px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    transition: all 0.35s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
     border-color: #38bdf8;
-    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.1);
+    box-shadow: 0 20px 45px rgba(56, 189, 248, 0.12);
 }
 
 .card h3 {
@@ -83,37 +107,43 @@ body {
     font-size: 14px;
 }
 
-/* TAGS / STACK */
+/* ========== TAGS / STACK ========== */
 .card span {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 12px;
     color: #38bdf8;
+
     background: rgba(56, 189, 248, 0.08);
-    padding: 5px 10px;
-    border-radius: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
 }
 
-/* BUTTON */
+/* ========== BUTTON ========== */
 .button {
     display: inline-block;
     margin-top: 14px;
-    padding: 10px 14px;
-    background: #38bdf8;
-    color: #0f172a;
-    border-radius: 8px;
-    text-decoration: none;
+    padding: 12px 16px;
+
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #0b1220;
+
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
-    transition: 0.25s;
+    text-decoration: none;
+
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: #0ea5e9;
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.35);
 }
 
-/* SKILLS (si tu gardes l’ancienne section) */
+/* ========== SKILLS ========== */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -123,22 +153,39 @@ body {
 .skills span {
     background: #1e293b;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 14px;
     border: 1px solid #26324a;
 }
 
-/* LISTS */
+/* ========== LISTES ========== */
 ul {
     padding-left: 18px;
     color: #cbd5e1;
 }
 
-/* FOOTER */
+/* ========== NAV (si tu ajoutes une navbar) ========== */
+nav {
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: #94a3b8;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* ========== FOOTER ========== */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     color: #64748b;
     border-top: 1px solid #1f2a44;
-    margin-top: 40px;
+    margin-top: 60px;
 }
