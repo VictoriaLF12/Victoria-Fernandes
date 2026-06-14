@@ -5,7 +5,7 @@ Entry-level data analyst with strong skills in SQL, Python, Excel and Power Bi f
 ## Compétences
 - Python (analyse de données)
 - SQL (requêtes, jointures)
-- Power Bi
+- Power BI
 
 ## Continuous Learning
 I am currently strengthening my data analytics skills through DataCamp:
